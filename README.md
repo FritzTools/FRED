@@ -6,4 +6,4 @@ FRED ist ein Editor für die Fritz!Box
 - [AvalonEdit](http://www.avalonedit.net) `6.3.0.90`
 - [WPFHexaEditor](https://github.com/abbaye/WpfHexEditorControl) `2.1.7`
 - [Rssdp](https://github.com/Yortw/RSSDP) `4.0.4`
-- [Fody](https://github.com/Fody/Fody) `6.8.0` (Only for packaging)
+- [Constura.Fody](https://github.com/Fody/Costura) `5.8.0-alpha0098` (Only for packaging)
