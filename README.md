@@ -23,6 +23,11 @@ Der Name **FRED** setzt sich zusammen aus **FR**itz!Box und **ED**itor. Cool, od
 ## 💥 Aktuelle ToDo-Liste
 Wenn du wissen möchtest, woran aktuell gearbeitet wird, schaue doch mal in der [ToDo-Liste](https://github.com/orgs/FritzTools/projects/1) vorbei!
 
+## 🐞 Fehler/Bugs?
+Melde Fehler bittre direkt bei den [Issues](https://github.com/FritzTools/FRED/issues/new)!
+
+Eine komplette Liste aller aktuellen Bugs findest du [hier](https://github.com/FritzTools/FRED/issues).
+
 ## 🎨 Screenshots
 Du kannst [hier](https://github.com/FritzTools/FRED/blob/main/Screenshots/Readme.md) alle Screenshots der Software einsehen.
 
