@@ -21,7 +21,7 @@ Mit FRED bekommst du ein einfachen Editor, der die Konfiguration der `Fritz!Box`
 * **Aktualisierungen und Unterstützung:**
   > Die Community hält den Editor ständig auf dem neuesten Stand und bietet über `GitHub` regelmäßige Updates und technischen Support, um sicherzustellen, dass du stets die bestmögliche Erfahrung hast.
 
-  > Der `Fritz!Box` Konfigurationsdatei-Editor ist ein unverzichtbares Werkzeug für jeden, der seine `Fritz!Box` individuell anpassen und optimieren möchte. Ob du deine Netzwerkeinstellungen anpassen, Sicherheitsparameter aktualisieren oder einfach nur den WLAN-Setup verfeinern möchtest, FRED macht es dir leicht. Erhalte die volle Kontrolle über deine `Fritz!Box` mit dem benutzerfreundlichen, leistungsstarken und sicheren Konfigurationsdatei-Editor.
+Der `Fritz!Box` Konfigurationsdatei-Editor ist ein unverzichtbares Werkzeug für jeden, der seine `Fritz!Box` individuell anpassen und optimieren möchte. Ob du deine Netzwerkeinstellungen anpassen, Sicherheitsparameter aktualisieren oder einfach nur den WLAN-Setup verfeinern möchtest, FRED macht es dir leicht. Erhalte die volle Kontrolle über deine `Fritz!Box` mit dem benutzerfreundlichen, leistungsstarken und sicheren Konfigurationsdatei-Editor.
 
 ## :art: Screenshots
 You can found some screenshots of the Software [here](https://github.com/FritzTools/FRED/blob/main/Screenshots/Readme.md).
