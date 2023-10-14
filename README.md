@@ -23,13 +23,13 @@ Mit FRED bekommst du ein einfachen Editor, der die Konfiguration der `Fritz!Box`
 
   > Der `Fritz!Box` Konfigurationsdatei-Editor ist ein unverzichtbares Werkzeug für jeden, der seine `Fritz!Box` individuell anpassen und optimieren möchte. Ob du deine Netzwerkeinstellungen anpassen, Sicherheitsparameter aktualisieren oder einfach nur den WLAN-Setup verfeinern möchtest, FRED macht es dir leicht. Erhalte die volle Kontrolle über deine `Fritz!Box` mit dem benutzerfreundlichen, leistungsstarken und sicheren Konfigurationsdatei-Editor.
 
-## Screenshots
+## :art: Screenshots
 You can found some screenshots of the Software [here](https://github.com/FritzTools/FRED/blob/main/Screenshots/Readme.md).
 
-## Disclaimer
+## :page_with_curl: Disclaimer
 Der Name `Fritz!Box`, das dazugehörige Logo und der Name `AVM` sind eingetragene Warenmarken der **AVM Computersysteme Vertriebs GmbH** ([https://avm.de](https://avm.de)). Weder arbeiten die `Contributor` bei AVM, noch vertreten sie diese. Dieses Projekt ist ein OpenSource-Projekt und unter [MIT-Lizenz](https://github.com/FritzTools/FRED/blob/main/LICENSE) gestellt.
 
-## Depencies
+## :books: Depencies
 - [Newtonsoft.Json](https://www.newtonsoft.com/json) `13.0.3`
 - [AvalonEdit](http://www.avalonedit.net) `6.3.0.90`
 - [WPFHexaEditor](https://github.com/abbaye/WpfHexEditorControl) `2.1.7`
