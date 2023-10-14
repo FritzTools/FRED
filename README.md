@@ -34,7 +34,7 @@ Du kannst [hier](https://github.com/FritzTools/FRED/blob/main/Screenshots/Readme
 ## 📃 Disclaimer
 Der Name `Fritz!Box`, das dazugehörige Logo und der Name `AVM` sind eingetragene Warenmarken der **AVM Computersysteme Vertriebs GmbH** ([https://avm.de](https://avm.de)). Weder arbeiten die `Contributor` bei AVM, noch vertreten sie diese. Dieses Projekt ist ein OpenSource-Projekt und unter [MIT-Lizenz](https://github.com/FritzTools/FRED/blob/main/LICENSE) gestellt.
 
-## 📚 Depencies
+## 📦 Depencies
 **FRED** verwendet einige Drittanbieter-Bibliotheken. Nachfolgend findest du hier eine Liste der verwendeten Bibliotheken:
 | Name | Version | Beschreibung |
 |--|--|--|
