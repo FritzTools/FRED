@@ -1,6 +1,7 @@
+![Preview](https://raw.githubusercontent.com/FritzTools/FRED/main/Screenshots/Preview.png)
+
 # FRED
 FRED ist ein Editor für die Fritz!Box
-![Preview](https://raw.githubusercontent.com/FritzTools/FRED/main/Screenshots/Preview.png)
 
 ## Screenshots
 You can fouund some screenshots of the Software [here](https://github.com/FritzTools/FRED/blob/main/Screenshots/Readme.md).
