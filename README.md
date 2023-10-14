@@ -26,6 +26,9 @@ Mit FRED bekommst du ein einfachen Editor, der die Konfiguration der `Fritz!Box`
 ## Screenshots
 You can fouund some screenshots of the Software [here](https://github.com/FritzTools/FRED/blob/main/Screenshots/Readme.md).
 
+## Disclaimer
+Der Name `Fritz!Box`, das dazugehörige Logo und der Name `AVM` sind eingetragene Warenmarken der **AVM Computersysteme Vertriebs GmbH** ([https://avm.de](https://avm.de)). Weder arbeiten die `Contributor` bei AVM, noch vertreten sie diese. Dieses Projekt ist ein OpenSource-Projekt und unter [MIT-Lizenz](https://github.com/FritzTools/FRED/blob/main/LICENSE) gestellt.
+
 ## Depencies
 - [Newtonsoft.Json](https://www.newtonsoft.com/json) `13.0.3`
 - [AvalonEdit](http://www.avalonedit.net) `6.3.0.90`
