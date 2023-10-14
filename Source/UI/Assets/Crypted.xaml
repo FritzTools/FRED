@@ -1,0 +1,25 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <DrawingImage x:Key="IconCrypted">
+        <DrawingImage.Drawing>
+            <DrawingGroup ClipGeometry="M0,0 V96 H96 V0 H0 Z">
+                <GeometryDrawing Brush="#FF000000" Geometry="F1 M96,96z M0,0z M64.58,31.99C70.38,32.09,76.71,31.09,79.25,37.58Q80.02,39.54 80.01,44.51 79.99,60.22 79.99,75.93C79.99,83.97,77.5,87.98,69.27,87.99Q47.38,88,25.5,88.01C18.43,88.01,16.04,83.1,16.03,76.57Q15.98,58.91 15.99,41.25 15.99,34.72 21.78,32.64C24.53,31.65,28.27,32.02,31.47,31.99Q32,31.99,32,31.46C32.01,27.57 31.62,23.03 32.66,19.6 35.96,8.72 48.62,4.41 57.75,11.51 64.98,17.14 63.78,23.41 64.07,31.48Q64.08,31.98,64.58,31.99z M38.42,32L57.6,32A0.43,0.43,0,0,0,58.03,31.57L58.03,24.22A10.18,9.87,90,0,0,48.16,14.04L47.86,14.04A10.18,9.87,-90,0,0,37.99,24.22L37.99,31.57A0.43,0.43,0,0,0,38.42,32z M74,41.08A3.08,3.08,0,0,0,70.92,38L25.08,38A3.08,3.08,0,0,0,22,41.08L22,78.92A3.08,3.08,0,0,0,25.08,82L70.92,82A3.08,3.08,0,0,0,74,78.92L74,41.08z" />
+                <GeometryDrawing Brush="#FF000000">
+                    <GeometryDrawing.Geometry>
+                        <EllipseGeometry RadiusX="3.97" RadiusY="3.97" Center="34,60" />
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+                <GeometryDrawing Brush="#FF000000">
+                    <GeometryDrawing.Geometry>
+                        <EllipseGeometry RadiusX="3.97" RadiusY="3.97" Center="48,60" />
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+                <GeometryDrawing Brush="#FF000000">
+                    <GeometryDrawing.Geometry>
+                        <EllipseGeometry RadiusX="3.97" RadiusY="3.97" Center="62,60" />
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+        </DrawingImage.Drawing>
+    </DrawingImage>
+</ResourceDictionary>

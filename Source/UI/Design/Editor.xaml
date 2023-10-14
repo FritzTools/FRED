@@ -1,0 +1,33 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:avalon="clr-namespace:ICSharpCode.AvalonEdit.Editing;assembly=ICSharpCode.AvalonEdit">
+    <Style x:Shared="False" TargetType="{x:Type avalon:LineNumberMargin}">
+        <Setter Property="Margin" Value="0,0,15,0"/>
+    </Style>
+
+    <Style x:Shared="False" TargetType="{x:Type avalon:TextArea}">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+
+        <!-- Text Selection -->
+        <Setter Property="SelectionBrush">
+            <Setter.Value>
+                <SolidColorBrush Opacity="0.2" Color="#000000" />
+            </Setter.Value>
+        </Setter>
+        <Setter Property="SelectionBorder">
+            <Setter.Value>
+                <Pen Thickness="0" StartLineCap="Flat">
+                    <Pen.Brush>
+                        <SolidColorBrush Color="Transparent" />
+                    </Pen.Brush>
+                </Pen>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="SelectionForeground">
+            <Setter.Value>
+                <SolidColorBrush Color="#FFFFFF" />
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

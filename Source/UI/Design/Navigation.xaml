@@ -1,0 +1,140 @@
+﻿<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="clr-namespace:FRED.UI.Controls"
+    xmlns:converters="clr-namespace:FRED.UI.Converters"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <Duration x:Key="AnimationDuration">0:0:0.2</Duration>
+    <converters:MultiplyConverter x:Key="multiplyConverter" />
+
+    <!-- Expander-Element -->
+    <ControlTemplate x:Key="NavigationExpander" TargetType="{x:Type controls:NavigationItemToggleButton}">
+        <Border x:Name="ExpanderStyle">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                
+                <!-- Header -->
+                <ContentPresenter Grid.Column="0" x:Name="HeaderContent" Margin="10,10,10,10" ContentSource="Content" />
+
+                <!-- Arrow -->
+                <Path x:Name="Arrow"                      
+                    Data="M 1,1.5 L 4.5,5 8,1.5"
+                    Stroke="#FF666666"
+                    StrokeThickness="2"
+                    Grid.Column="1"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Margin="10,10,10,10"
+                    RenderTransformOrigin="0.5,0.5"
+                    Visibility="{TemplateBinding ArrowVisibility}">
+                    <Path.Style>
+                        <Style TargetType="Path">
+                            <Setter Property="RenderTransform">
+                                <Setter.Value>
+                                    <RotateTransform Angle="-90"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Path.Style>
+                </Path>
+            </Grid>
+        </Border>
+        <ControlTemplate.Triggers>
+            <!-- Toggle-Animation -->
+            <Trigger Property="IsExpanded" Value="True">
+                <Trigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="Arrow" Storyboard.TargetProperty="(Path.RenderTransform).(RotateTransform.Angle)" By="90" Duration="{StaticResource AnimationDuration}"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.EnterActions>
+                <Setter Property="Background" Value="#1577cf" TargetName="ExpanderStyle"/>
+                <Trigger.ExitActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="Arrow" Storyboard.TargetProperty="(Path.RenderTransform).(RotateTransform.Angle)" By="-90" Duration="{StaticResource AnimationDuration}"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.ExitActions>
+            </Trigger>
+
+            <!-- MouseOver, Pressed behaviours-->
+            <Trigger Property="IsMouseOver" Value="true">
+                <Setter Property="Background" Value="#1577cf" TargetName="ExpanderStyle"/>
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="false">
+                <Setter Property="Background" Value="Transparent" TargetName="ExpanderStyle"/>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <!-- Menu-Item -->
+    <ControlTemplate x:Key="RevealExpander" TargetType="{x:Type controls:NavigationItem}">
+        <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            
+            <!-- Header-Element -->
+            <controls:NavigationItemToggleButton x:Name="ExpanderButton"
+                    Grid.Row="0" Template="{StaticResource NavigationExpander}"
+                    Content="{TemplateBinding Header}"                            
+                    OverridesDefaultStyle="True"
+                    Background="Transparent"
+                    Command="{Binding Path=ToggleCommand, RelativeSource={RelativeSource TemplatedParent}}"                             
+                    Padding="1.5, 0"
+                    BorderBrush="Transparent"
+                    BorderThickness="0"
+                    ArrowVisibility="{Binding Path=ArrowVisibility, RelativeSource={RelativeSource TemplatedParent}}">
+            </controls:NavigationItemToggleButton>
+            
+            <!-- Content-Element -->
+            <ScrollViewer VerticalAlignment="Top" x:Name="ExpanderContentScrollView" Grid.Row="1" VerticalScrollBarVisibility="Hidden">
+                <ScrollViewer.Tag>
+                    <sys:Double>0.0</sys:Double>
+                </ScrollViewer.Tag>
+                <ScrollViewer.Resources>
+                    <Style TargetType="ScrollViewer">
+                        <Setter Property="Height">
+                            <Setter.Value>
+                                <MultiBinding Converter="{StaticResource multiplyConverter}">
+                                    <Binding Path="ActualHeight" ElementName="ExpanderContent"/>
+                                    <Binding Path="Tag" RelativeSource="{RelativeSource Self}" />
+                                </MultiBinding>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </ScrollViewer.Resources>
+                
+                <!-- Content -->
+                <ContentPresenter x:Name="ExpanderContent" ContentSource="Content" />
+            </ScrollViewer>
+        </Grid>
+        
+        <!-- Animation -->
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsExpanded" Value="True">
+                <Trigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="ExpanderContentScrollView" Storyboard.TargetProperty="Tag" To="1" Duration="{StaticResource AnimationDuration}"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.EnterActions>
+                <Trigger.ExitActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="ExpanderContentScrollView" Storyboard.TargetProperty="Tag" To="0" Duration="{StaticResource AnimationDuration}"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.ExitActions>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+</ResourceDictionary>

@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="FRED.UI.Content.File"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:FRED.UI.Content"
+      xmlns:controls="clr-namespace:FRED.UI.Controls"
+      mc:Ignorable="d" HorizontalContentAlignment="Stretch"
+      >
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/FRED;component/UI/Design/UserControl.xaml"/>
+                <ResourceDictionary Source="/FRED;component/UI/Assets/Icons.xaml"/>
+                <ResourceDictionary Source="/FRED;component/UI/Design/Tab.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="45" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10,5">
+            <Image Width="20" Source="{StaticResource IconFiles}" VerticalAlignment="Center" />
+            <Label Content="Files" FontSize="18" Foreground="#3f464c" />
+            <Label Content="❯" FontSize="16" Foreground="#3f464c" />
+            <Label Name="Filename" Content="Unknown" FontSize="18" Foreground="#3f464c" />
+        </StackPanel>
+
+        <Label Grid.Row="1" Name="Description" Content="" Margin="10,0" FontSize="14" Foreground="#3f464c" />
+
+        <TabControl Grid.Row="2" HorizontalContentAlignment="Stretch" ClipToBounds="True">
+            <TabItem Header="Settings" HorizontalContentAlignment="Stretch">
+                <Label Content="Content goes here..." />
+            </TabItem>
+            <TabItem Header="Source" IsSelected="True">
+                <controls:DynamicEditor x:Name="Source" />
+            </TabItem>
+        </TabControl>
+    </Grid>
+</UserControl>

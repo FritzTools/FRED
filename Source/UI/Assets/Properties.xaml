@@ -1,0 +1,27 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <DrawingImage x:Key="IconProperties">
+        <DrawingImage.Drawing>
+            <DrawingGroup ClipGeometry="M0,0 V96 H96 V0 H0 Z">
+                <GeometryDrawing Brush="#FF000000" Geometry="F1 M96,96z M0,0z M83.913,72.9755A11.15,11.15,0,0,1,72.7242,84.0865L23.0245,83.913A11.15,11.15,0,0,1,11.9135,72.7242L12.087,23.0245A11.15,11.15,0,0,1,23.2758,11.9135L72.9755,12.087A11.15,11.15,0,0,1,84.0865,23.2758L83.913,72.9755z M77.9764,22.9877A5.08,5.08,0,0,0,72.8875,17.9165L23.0276,18.0036A5.08,5.08,0,0,0,17.9565,23.0924L18.0436,72.9923A5.08,5.08,0,0,0,23.1325,78.0635L72.9924,77.9764A5.08,5.08,0,0,0,78.0635,72.8876L77.9764,22.9877z" />
+                <GeometryDrawing Brush="#FF000000" Geometry="F1 M96,96z M0,0z M72.0171,36.8976A3.04,3.04,0,0,1,68.9877,39.9482L45.0879,40.0317A3.04,3.04,0,0,1,42.0373,37.0023L42.0029,27.1424A3.04,3.04,0,0,1,45.0323,24.0918L68.9321,24.0083A3.04,3.04,0,0,1,71.9827,27.0377L72.0171,36.8976z M66.1473,31.2783A1.14,1.14,0,0,0,65.0034,30.1423L49.1435,30.1977A1.14,1.14,0,0,0,48.0074,31.3417L48.0127,32.8417A1.14,1.14,0,0,0,49.1566,33.9777L65.0165,33.9223A1.14,1.14,0,0,0,66.1526,32.7783L66.1473,31.2783z" />
+                <GeometryDrawing Brush="#FF000000">
+                    <GeometryDrawing.Geometry>
+                        <RectangleGeometry RadiusX="2.82" RadiusY="2.82" Rect="24.03,28.02,11.94,5.96" />
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+                <GeometryDrawing Brush="#FF000000" Geometry="F1 M96,96z M0,0z M71.99,56.98A3,3,0,0,1,68.99,59.98L45.01,59.98A3,3,0,0,1,42.01,56.98L42.01,47.02A3,3,0,0,1,45.01,44.02L68.99,44.02A3,3,0,0,1,71.99,47.02L71.99,56.98z M66.15,51.32A1.16,1.16,0,0,0,64.99,50.16L49.15,50.16A1.16,1.16,0,0,0,47.99,51.32L47.99,52.8A1.16,1.16,0,0,0,49.15,53.96L64.99,53.96A1.16,1.16,0,0,0,66.15,52.8L66.15,51.32z" />
+                <GeometryDrawing Brush="#FF000000">
+                    <GeometryDrawing.Geometry>
+                        <RectangleGeometry RadiusX="2.82" RadiusY="2.82" Rect="24.02,48.02,11.96,5.96" />
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+                <GeometryDrawing Brush="#FF000000">
+                    <GeometryDrawing.Geometry>
+                        <RectangleGeometry RadiusX="2.89" RadiusY="2.89" Rect="34.02,66.05,37.96,5.94" />
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+        </DrawingImage.Drawing>
+    </DrawingImage>
+</ResourceDictionary>

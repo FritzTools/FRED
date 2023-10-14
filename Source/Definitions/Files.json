@@ -1,0 +1,130 @@
+﻿[
+  {
+    "File": "ar7.cfg",
+    "Description": "Hauptkonfiguration der Fritz!Box (Netzwerk- und Systemkonfiguration)."
+  },
+  {
+    "File": "wlan.cfg",
+    "Description": "Konfiguration des WLAN Accesspoints bzw. des WDS-Repeaters."
+  },
+  {
+    "File": "voip.cfg",
+    "Description": "Konfiguration für VoIP"
+  },
+  {
+    "File": "usb.cfg",
+    "Description": "Konfiguration der Dienste um NAS und den USB-Host-Anschluss"
+  },
+  {
+    "File": "tr069.cfg",
+    "Description": "TR-069 ACS-Server, Autokonfiguration und automatische Firmwareupdates"
+  },
+  {
+    "File": "tr369.cfg",
+    "Description": "TR-369 USP-Platform, Kommunikation zwischen Anbieter und Router"
+  },
+  {
+    "File": "fx_cg",
+    "Description": "Telefon?"
+  },
+  {
+    "File": "fx_conf",
+    "Description": "Hauptkonfiguration für Telefon, siehe telcfg"
+  },
+  {
+    "File": "fx_def",
+    "Description": "Telefon?"
+  },
+  {
+    "File": "fx_lcr",
+    "Description": "Least Cost Router Funktion für Telefonie"
+  },
+  {
+    "File": "telefon_misc",
+    "Description": "u.A. interner Fax-Empfang"
+  },
+  {
+    "File": "phonebook",
+    "Description": "Systemweites Telefonbuch"
+  },
+  {
+    "File": "calllog",
+    "Description": "Optionales Logfile für calllog"
+  },
+  {
+    "File": "dect_misc",
+    "Description": "Globale Konfiguration für dect_manager"
+  },
+  {
+    "File": "fonctrl",
+    "Description": "Konfiguration angemeldeter DECT- und Mini-Telefone"
+  },
+  {
+    "File": "dect_eeprom",
+    "Description": "DECT-Kalibrier EEPROM"
+  },
+  {
+    "File": "dmgr_handset_user",
+    "Description": "Mobilteil-Konfiguration"
+  },
+  {
+    "File": "tamconf",
+    "Description": "Anrufbeantworter-Konfig"
+  },
+  {
+    "File": "vpn.cfg",
+    "Description": "AVM VPN Konfiguration"
+  },
+  {
+    "File": "user.cfg",
+    "Description": "Konfiguration der Kindersicherung für usermand / usermand2"
+  },
+  {
+    "File": "userstat.cfg",
+    "Description": "Konfiguration der Kindersicherung für usermand / usermand2"
+  },
+  {
+    "File": "umts.cfg",
+    "Description": "UMTS-Modem Konfiguration"
+  },
+  {
+    "File": "configd",
+    "Description": "Konfiguration für configd"
+  },
+  {
+    "File": "ahausr.cfg",
+    "Description": ""
+  },
+  {
+    "File": "aha.cfg",
+    "Description": ""
+  },
+  {
+    "File": "ahastat.cfg",
+    "Description": ""
+  },
+  {
+    "File": "ahadect.cfg",
+    "Description": ""
+  },
+  {
+    "File": "ahanet.cfg",
+    "Description": ""
+  },
+  {
+    "File": "ahaglobal.cfg",
+    "Description": ""
+  },
+  {
+    "File": "ahapushmail.cfg",
+    "Description": ""
+  },
+  {
+    "File": "avmnexus.cfg",
+    "Description": ""
+  },
+  {
+    "File": "dvb.cfg",
+    "Description": "TV Einstellungen"
+  }
+]

@@ -1,0 +1,28 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <DrawingImage x:Key="IconFiles">
+        <DrawingImage.Drawing>
+            <DrawingGroup ClipGeometry="M0,0 V96 H96 V0 H0 Z">
+                <DrawingGroup.Transform>
+                    <TranslateTransform X="12.98" Y="3" />
+                </DrawingGroup.Transform>
+                <GeometryDrawing Brush="#FF000000" Geometry="F1 M96,96z M0,0z M80,64.75C79.99,69.41,77.2,73.58,72.94,75.21Q70.88,76 65.47,76 51.61,75.98 37.75,76.04 30.31,76.06 27.39,70.29 25.98,67.51 25.99,61.48 26.01,43.84 25.99,26.21C25.98,19.2,26.08,13.99,32.35,11.11Q34.7,10.03 39.38,10.01 47.21,9.98 55.02,10.01A3.03,3,-22,0,1,57.13,10.89L79.13,32.89A2.94,2.93,22.3,0,1,79.99,34.94Q80.03,49.57,80,64.75z M60.23,37.99C54.5,38.05,52.04,33.59,52.04,28.44Q52.03,22.58 51.98,16.61 51.98,16.06 51.43,16.05 44.78,15.9 38.15,16.03C34.35,16.1,31.93,17.5,31.94,21.5Q31.99,42.5,32.01,63.5C32.02,67.24,33.2,69.99,37.25,70Q53.65,70.02,69.26,69.99A4.75,4.75,0,0,0,74,65.24L74,38.51A0.48,0.47,0.6,0,0,73.53,38.04Q66.74,37.93,60.23,37.99z M69.18,31.4L58.6,20.81Q58.01,20.23,58.01,21.05L58,30A2,1.99,0.1,0,0,60,32L68.93,31.99A0.35,0.35,0,0,0,69.18,31.4z" />
+                <GeometryDrawing Brush="#FF000000" Geometry="F1 M96,96z M0,0z M21.98,67C21.97,73.75,27.65,79.98,34.94,79.98Q52.06,79.99 69.26,80.01 69.82,80.01 69.58,80.51C67.45,85.04,64.27,86.01,59.21,85.99Q50.06,85.97 40.91,86.02 32.08,86.07 28.24,84.67C18.93,81.26,16.01,73.5,16.01,63.9Q16,46.07 15.99,28.24 15.98,22.85 21.61,20.5 21.99,20.34 21.99,20.76 22.02,43.9 21.98,67z" />
+                <DrawingGroup Transform="0.999998476913288,-0.00174532836589831,0.00174532836589831,0.999998476913288,53,47">
+                    <GeometryDrawing Brush="#FF000000">
+                        <GeometryDrawing.Geometry>
+                            <RectangleGeometry RadiusX="2.91" RadiusY="2.91" Rect="-12.98,-3,25.96,6" />
+                        </GeometryDrawing.Geometry>
+                    </GeometryDrawing>
+                </DrawingGroup>
+                <DrawingGroup Transform="0.999998476913288,-0.00174532836589831,0.00174532836589831,0.999998476913288,53,59.01">
+                    <GeometryDrawing Brush="#FF000000">
+                        <GeometryDrawing.Geometry>
+                            <RectangleGeometry RadiusX="2.89" RadiusY="2.89" Rect="-12.98,-2.98,25.96,5.96" />
+                        </GeometryDrawing.Geometry>
+                    </GeometryDrawing>
+                </DrawingGroup>
+            </DrawingGroup>
+        </DrawingImage.Drawing>
+    </DrawingImage>
+</ResourceDictionary>

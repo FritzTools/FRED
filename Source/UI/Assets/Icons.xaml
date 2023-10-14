@@ -1,0 +1,15 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/FRED;component/UI/Assets/Binary.xaml"/>
+        <ResourceDictionary Source="/FRED;component/UI/Assets/Crypted.xaml"/>
+        <ResourceDictionary Source="/FRED;component/UI/Assets/Files.xaml"/>
+        <ResourceDictionary Source="/FRED;component/UI/Assets/Info.xaml"/>
+        <ResourceDictionary Source="/FRED;component/UI/Assets/Properties.xaml"/>
+        <ResourceDictionary Source="/FRED;component/UI/Assets/Settings.xaml"/>
+        <ResourceDictionary Source="/FRED;component/UI/Assets/Unknown.xaml"/>
+        <ResourceDictionary Source="/FRED;component/UI/Assets/XML.xaml"/>
+        <ResourceDictionary Source="/FRED;component/UI/Assets/Logo.xaml"/>
+        <ResourceDictionary Source="/FRED;component/UI/Assets/FritzBox.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>
