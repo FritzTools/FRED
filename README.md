@@ -16,14 +16,17 @@ Mit FRED bekommst du ein einfachen Editor, der die Konfiguration der `Fritz!Box`
 Der `Fritz!Box` Konfigurationsdatei-Editor ist ein unverzichtbares Werkzeug für jeden, der seine `Fritz!Box` individuell anpassen und optimieren möchte. Ob du deine Netzwerkeinstellungen anpassen, Sicherheitsparameter aktualisieren oder einfach nur den WLAN-Setup verfeinern möchtest, FRED macht es dir leicht. Erhalte die volle Kontrolle über deine `Fritz!Box` mit dem benutzerfreundlichen, leistungsstarken und sicheren Konfigurationsdatei-Editor.
 
 ## :art: Screenshots
-You can found some screenshots of the Software [here](https://github.com/FritzTools/FRED/blob/main/Screenshots/Readme.md).
+Du kannst [hier](https://github.com/FritzTools/FRED/blob/main/Screenshots/Readme.md) alle Screenshots der Software einsehen.
 
 ## :page_with_curl: Disclaimer
 Der Name `Fritz!Box`, das dazugehörige Logo und der Name `AVM` sind eingetragene Warenmarken der **AVM Computersysteme Vertriebs GmbH** ([https://avm.de](https://avm.de)). Weder arbeiten die `Contributor` bei AVM, noch vertreten sie diese. Dieses Projekt ist ein OpenSource-Projekt und unter [MIT-Lizenz](https://github.com/FritzTools/FRED/blob/main/LICENSE) gestellt.
 
 ## :books: Depencies
-- [Newtonsoft.Json](https://www.newtonsoft.com/json) `13.0.3`
-- [AvalonEdit](http://www.avalonedit.net) `6.3.0.90`
-- [WPFHexaEditor](https://github.com/abbaye/WpfHexEditorControl) `2.1.7`
-- [Rssdp](https://github.com/Yortw/RSSDP) `4.0.4`
-- [Constura.Fody](https://github.com/Fody/Costura) `5.8.0-alpha0098` (Only for packaging)
+FRED verwendet einige Drittanbieter-Bibliotheken. Nachfolgend findest du hier eine Liste der verwendeten Bibliotheken:
+| Name | Version | Beschreibung |
+|--|--|--|
+| [Newtonsoft.Json](https://www.newtonsoft.com/json) | `13.0.3` | Diese Bibliothek wird benutzt um `JSON`-Dateien zu handhaben. Diese werden bei FRED für die eigenen Konfigurationsdateien verwendet. |
+| [AvalonEdit](http://www.avalonedit.net) | `6.3.0.90` | Da ein Text-Editor mit Syntaxhighlightning sehr komplex ist, verwendet FRED den bekanntesten Editor für `C#`/`WPF`-Projekte. |
+| [WPFHexaEditor](https://github.com/abbaye/WpfHexEditorControl) | `2.1.7` | FRED Verwendet bei binären Daten einen extra HEX-Editor, damit auch diese bearbeitet werden können. |
+| [Rssdp](https://github.com/Yortw/RSSDP) | `4.0.4` | Diese Bibliothek stellt das `Simple Service Discovery (SSDP)`-Protokoll bereit, damit FRED automatisch eine im Netzwerk registrierte `Fritz!Box` finden kann. |
+| [Constura.Fody](https://github.com/Fody/Costura) | `5.8.0-alpha0098` | Diese Bibliothek dient ausschließlich der Bereitstellung. Wenn FRED als Software kompiliert wird, packt `Fody` alle Abhängigkeiten und Bibliotheken zusammen, damit der Software-Ordner nicht "zugemüllt" wird. |
