@@ -3,6 +3,7 @@ using FRED.Core.Fritzbox.Networking.HTTP;
 using Microsoft.VisualBasic.ApplicationServices;
 using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Security.Cryptography;
 using System.Text;
 using System.Xml;
@@ -73,8 +74,9 @@ namespace FRED.Core.Fritzbox.Auth {
                 new KeyValuePair<String, String>("response", hash),
                 new KeyValuePair<String, String>("username", data.Username)
             }, delegate(String response) {
-                this.HandleResponse(response, data.Username, delegate(String sid) {
+                this.HandleResponse(response, data.Hostname, data.Username, delegate(String sid) {
                     Success?.Invoke(new AuthUser() {
+                        Endpoint    = data.Hostname,
                         Username    = data.Username,
                         SID         = sid
                     });
@@ -84,7 +86,7 @@ namespace FRED.Core.Fritzbox.Auth {
 
         public async void Call(LoginData data) {
             await Request.Get("http://" + data.Hostname + "/login_sid.lua?version=2", delegate (String response) {
-                this.HandleResponse(response, null, delegate(String challenge) {
+                this.HandleResponse(response, data.Hostname, null, delegate(String challenge) {
                     this.CreateChallenge(challenge, data);
                 });
             });
@@ -96,7 +98,7 @@ namespace FRED.Core.Fritzbox.Auth {
             }
 
             await Request.Get("http://" + data.Hostname + "/login_sid.lua?version=2&user=" + (data.Username == null ? "" : data.Username), delegate (String response) {
-                this.HandleResponse(response, data.Username, delegate(String challenge) {
+                this.HandleResponse(response, data.Hostname, data.Username, delegate(String challenge) {
                     try {
                         XmlDocument doc     = new XmlDocument();
                         doc.LoadXml(response);
@@ -143,7 +145,7 @@ namespace FRED.Core.Fritzbox.Auth {
             });
         }
 
-        private void HandleResponse(String response, String? username, Action<String> callback) {
+        private void HandleResponse(String response, String? hostname, String? username, Action<String> callback) {
             if(response == null || response.Trim().Equals("")) {
                 Error?.Invoke("Error 0x001: Login derzeit leider nicht möglich.");
                 return;
@@ -211,6 +213,7 @@ namespace FRED.Core.Fritzbox.Auth {
                 if (!SID.InnerText.Equals("0000000000000000")) {;
                     
                     Success?.Invoke(new AuthUser() {
+                        Endpoint    = hostname,
                         Username    = username,
                         SID         = SID.InnerText,
                         Rights      = rights

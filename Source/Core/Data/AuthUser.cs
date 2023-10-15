@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Collections.Specialized;
 using System.Text;
 
 namespace FRED.Core.Data {
     public class AuthUser {
+        public String? Endpoint { get; set; } = null;
         public String? Username { get; set; } = null;
         public String? SID { get; set; } = null;
         public Dictionary<String, AccessRights>? Rights { get; set; } = null;
@@ -28,7 +27,7 @@ namespace FRED.Core.Data {
                 rights.Append(", ");
             }
 
-            return "[AuthUser Username=" + Username + ", SID=" + SID + ", Rights=" + rights.ToString().TrimEnd(' ').TrimEnd(',') + "]";
+            return "[AuthUser Endpoint=" + Endpoint + ", Username=" + Username + ", SID=" + SID + ", Rights=" + rights.ToString().TrimEnd(' ').TrimEnd(',') + "]";
         }
     }
 }
