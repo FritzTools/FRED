@@ -4,12 +4,17 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
+using FRED.Core.Data;
+using FRED.Core.Fritzbox.Auth;
 using FRED.Core.Interfaces;
 using Rssdp;
 
 namespace FRED.UI {
     public partial class TargetSeletor : Window, Changeable {
         private Action<String>? callback            = null;
+        private Action<AuthUser>? auth_callback     = null;
+        private Login login                         = new Login();
+        private Signin signin                       = new Signin();
         System.Windows.Forms.OpenFileDialog dialog  = new System.Windows.Forms.OpenFileDialog() {
             Filter              = "Export files (*.export)|*.export",
             InitialDirectory    = Environment.GetFolderPath(Environment.SpecialFolder.Desktop),
@@ -18,6 +23,8 @@ namespace FRED.UI {
 
         public TargetSeletor() {
             InitializeComponent();
+
+            this.login.OnLoginRequest   = OnLoginRequest;
 
             this.dialog.FileOk += delegate (object? sender, CancelEventArgs e) {
                 System.Diagnostics.Debug.Print(dialog.FileName);
@@ -28,6 +35,37 @@ namespace FRED.UI {
 
                 this.Hide();
             };
+        }
+
+        public void OnClickManual(object sender, MouseButtonEventArgs e) {
+            this.login.SetHostname(null);
+            this.login.Show();
+        }
+
+        public void OpenLogin(String hostname, Action<AuthUser> callback) {
+            this.auth_callback = callback;
+
+            this.login.SetHostname(hostname, false);
+            this.login.Show();
+        }
+
+        public void OnLoginRequest(LoginData data) {
+            signin.WaitTimer += delegate (int? seconds) {
+                this.login.SetTimer(seconds);
+            };
+
+            signin.Success += delegate(AuthUser? user) {
+                this.auth_callback?.Invoke(user);
+                this.login.Release();
+                this.login.Hide();
+            };
+
+            signin.Error += delegate(String? error) {
+                this.login.SetError(error);
+                this.login.Release();
+            };
+
+            signin.Call(data);
         }
 
         public async void OnChange(object? sender, EventArgs e) {
@@ -115,7 +153,14 @@ namespace FRED.UI {
                 return;
             }
 
-            if(this.callback == null) {
+            signin.CallPreview(new LoginData() {
+                Hostname = new Uri(hostname).Host,
+                Username = ""
+            }, delegate(LoginPreview preview) {
+                login.OnPreview(preview);
+            });
+
+            if (this.callback == null) {
                 return;
             }
 

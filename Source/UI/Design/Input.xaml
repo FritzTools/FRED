@@ -13,4 +13,48 @@
             </Style>
         </Style.Resources>
     </Style>
+
+    <Style TargetType="{x:Type ComboBox}">
+        <Setter Property="BorderBrush" Value="#3f464cba" />
+        <Setter Property="Margin" Value="4" />
+        <Setter Property="Padding" Value="10" />
+        <Setter Property="Background" Value="#FFFFFF" />
+        <Setter Property="HorizontalAlignment" Value="Stretch" />
+        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+        <Setter Property="Foreground" Value="#000000" />
+        <Style.Resources>
+            <Style TargetType="{x:Type Border}">
+                <Setter Property="CornerRadius" Value="3" />
+            </Style>
+        </Style.Resources>
+    </Style>
+
+    <ControlTemplate x:Key="PasswordBox" TargetType="{x:Type PasswordBox}">
+        <Border Background="{TemplateBinding Background}" x:Name="Bd" BorderBrush="#3f464cba" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="3">
+            <ScrollViewer Name="PART_ContentHost" SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}" />
+        </Border>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" TargetName="Bd"/>
+                <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+            </Trigger>
+            <Trigger Property="Width" Value="Auto">
+                <Setter Property="MinWidth" Value="100"/>
+            </Trigger>
+            <Trigger Property="Height" Value="Auto">
+                <Setter Property="MinHeight" Value="20"/>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <Style TargetType="{x:Type PasswordBox}">
+        <Setter Property="BorderBrush" Value="#3f464cba" />
+        <Setter Property="Margin" Value="4" />
+        <Setter Property="Padding" Value="10" />
+        <Setter Property="Background" Value="#FFFFFF" />
+        <Setter Property="HorizontalAlignment" Value="Stretch" />
+        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+        <Setter Property="Foreground" Value="#000000" />
+        <Setter Property="Template" Value="{StaticResource PasswordBox}" />
+    </Style>
 </ResourceDictionary>

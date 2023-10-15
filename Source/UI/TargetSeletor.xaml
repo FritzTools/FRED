@@ -63,11 +63,12 @@
             <StackPanel x:Name="NetworkPanel" Margin="30, 0, 0, 0" Grid.Column="2">
                 <Label FontSize="18" Foreground="#3f464c">Live</Label>
                 <TextBlock TextWrapping="Wrap" Margin="5, 10, 0, 0" FontSize="14" Foreground="#3f464c">Verbinde dich direkt mit der Fritz!Box um diese zu bearbeiten.</TextBlock>
-                <Border x:Name="NavigationBorder" Grid.Row="1" Grid.Column="0" Margin="0,30,0,0" Height="150" Background="#FFFFFF" BorderBrush="#3F464C73" BorderThickness="1">
+                <Border x:Name="NavigationBorder" Grid.Row="1" Grid.Column="0" Margin="0,20,0,0" Height="140" Background="#FFFFFF" BorderBrush="#3F464C73" BorderThickness="1">
                     <ScrollViewer VerticalScrollBarVisibility="Auto">
                         <StackPanel x:Name="Devices" />
                     </ScrollViewer>
                 </Border>
+                <Label HorizontalAlignment="Center" Cursor="Hand" Foreground="#1577cf" PreviewMouseDown="OnClickManual">Kein Gerät gefunden?</Label>
             </StackPanel>
         </Grid>
     </Grid>

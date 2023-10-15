@@ -35,15 +35,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Core\Fritzbox\Auth\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="AvalonEdit" Version="6.3.0.90" />
     <PackageReference Include="Costura.Fody" Version="5.8.0-alpha0098">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="CryptSharpStandard" Version="1.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="Rssdp" Version="4.0.4" />
     <PackageReference Include="WPFHexaEditor" Version="2.1.7" />

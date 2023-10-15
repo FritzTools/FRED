@@ -1,4 +1,5 @@
-﻿using FRED.Core.Fritzbox.Networking.Discover;
+﻿using FRED.Core.Data;
+using FRED.Core.Fritzbox.Networking.Discover;
 using FRED.Core.Parser;
 using FRED.UI;
 using System;
@@ -30,11 +31,11 @@ namespace FRED {
             Discovery.SearchForDevices();
 
             selector.Show(delegate(String file) {
-                if(new Uri(file).IsFile) {
-                    System.Diagnostics.Debug.Print("Selected File: " + file);
-                } else {
-                    System.Diagnostics.Debug.Print("Hostname: " + file);
-                    // Open Login/Auth
+                if(!new Uri(file).IsFile) {
+                    selector.OpenLogin(file, delegate(AuthUser user) {
+                        System.Diagnostics.Debug.Print("[OpenLogin] Selector: " + user.ToString());
+                        // @ToDo Bind to Editor, and request Export-File!
+                    });
                     return;
                 }
 

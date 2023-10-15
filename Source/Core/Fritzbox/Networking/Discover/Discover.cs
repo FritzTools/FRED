@@ -18,7 +18,7 @@ namespace FRED.Core.Fritzbox.Networking.Discover {
                 deviceLocator.NotificationFilter    = "upnp:rootdevice";
                 deviceLocator.DeviceAvailable       += OnDeviceResponse;
                 deviceLocator.StartListeningForNotifications();
-                deviceLocator?.SearchAsync();
+                deviceLocator.SearchAsync(TimeSpan.FromSeconds(10));
             }
         }
 
@@ -41,8 +41,6 @@ namespace FRED.Core.Fritzbox.Networking.Discover {
                         observer.OnChange(fullDevice, e);
                     }
                 }
-
-                //System.Diagnostics.Debug.Print("Found " + e.DiscoveredDevice.Usn + " at " + e.DiscoveredDevice.DescriptionLocation.ToString() +  ": " + fullDevice.PresentationUrl.ToString());
             }
         }
 
