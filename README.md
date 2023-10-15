@@ -8,7 +8,7 @@ Mit **FRED** bekommst du ein einfachen Editor, der die Konfiguration der `Fritz!
 |--|--|
 | 🛠️ ****Einfache Konfigurationsdateibearbeitung**** | 📕 **Unterstützung von `.export`-Dateien** |
 | **FRED** der Konfigurationsdatei-Editor ermöglicht es dir, die Einstellungen Ihrer `Fritz!Box` mühelos anzupassen. Ändere Netzwerkeinstellungen, Sicherheitsparameter, WLAN-Optionen und vieles mehr mit nur wenigen Mausklicks. | Unser Editor ist kompatibel mit den `Fritz!Box` `.export`-Dateien, was dir ermöglicht, diese Dateien nahtlos zu öffnen, zu bearbeiten und zu speichern. Du musst dir keine Sorgen um Konvertierungen oder Kompatibilitätsprobleme machen. |
-| 🔗 **Direkter Zugriff auf Ihre Fritz!Box** | 🔐 **Sicherheit und Datenschutz** |
+| 🌐 **Direkter Zugriff auf Ihre Fritz!Box** | 🔐 **Sicherheit und Datenschutz** |
 | Verbinde dich direkt mit deiner `Fritz!Box` über das Netzwerk, ohne komplizierte manuelle Eingriffe. **FRED** ermöglicht es dir, auf deiner eigenen `Fritz!Box` zuzugreifen und die Konfigurationsdateien ohne Umwege zu bearbeiten. | Wir nehmen die Sicherheit der Daten ernst. **FRED** bietet dir eine sichere Verbindungen zu deiner `Fritz!Box`. |
 | 💝 **Benutzerfreundliche Oberfläche** | 🔄 **Aktualisierungen und Unterstützung** |
 | Die Oberfläche von **FRED** ist intuitiv gestaltet, sodass sowohl Einsteiger als auch erfahrene Nutzer sich schnell zurechtfinden können. Die übersichtliche Benutzeroberfläche erleichtert die Navigation und die Bearbeitung von Konfigurationsdateien. | Die Community hält **FRED** ständig auf dem neuesten Stand und bietet über `GitHub` regelmäßige Updates und technischen Support an, um sicherzustellen, dass du stets die bestmögliche Nutzererfahrung hast. |
@@ -20,13 +20,21 @@ Eigentlich war der Name schnell gefunden. Sinngemäß hat sich der Name aus zwei
 
 Der Name **FRED** setzt sich zusammen aus **FR**itz!Box und **ED**itor. Cool, oder?
 
+## 💥 Aktuelle ToDo-Liste
+Wenn du wissen möchtest, woran aktuell gearbeitet wird, schaue doch mal in der [ToDo-Liste](https://github.com/orgs/FritzTools/projects/1) vorbei!
+
+## 🐞 Fehler/Bugs?
+Melde Fehler bittre direkt bei den [Issues](https://github.com/FritzTools/FRED/issues/new)!
+
+Eine komplette Liste aller aktuellen Bugs findest du [hier](https://github.com/FritzTools/FRED/issues).
+
 ## 🎨 Screenshots
 Du kannst [hier](https://github.com/FritzTools/FRED/blob/main/Screenshots/Readme.md) alle Screenshots der Software einsehen.
 
 ## 📃 Disclaimer
 Der Name `Fritz!Box`, das dazugehörige Logo und der Name `AVM` sind eingetragene Warenmarken der **AVM Computersysteme Vertriebs GmbH** ([https://avm.de](https://avm.de)). Weder arbeiten die `Contributor` bei AVM, noch vertreten sie diese. Dieses Projekt ist ein OpenSource-Projekt und unter [MIT-Lizenz](https://github.com/FritzTools/FRED/blob/main/LICENSE) gestellt.
 
-## 📚 Depencies
+## 📦 Depencies
 **FRED** verwendet einige Drittanbieter-Bibliotheken. Nachfolgend findest du hier eine Liste der verwendeten Bibliotheken:
 | Name | Version | Beschreibung |
 |--|--|--|
