@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using FRED.Core.Parser;
 
 namespace FRED.Core.Data {
     public class FileContainer {
@@ -9,6 +11,7 @@ namespace FRED.Core.Data {
         private String? content             = null;
         private bool crypted                = false;
         private FileDefinition? definition  = null;
+        private IToken? groups              = null;
 
         public FileContainer(String name, String type) {
             this.name = name;
@@ -99,6 +102,13 @@ namespace FRED.Core.Data {
             }
 
             return "<Unknown " + this.type  + ">";
+        }
+        public void SetGroups(IToken groups) {
+            this.groups = groups;
+        }
+
+        public IToken? GetGroups() {
+            return this.groups;
         }
     }
 }

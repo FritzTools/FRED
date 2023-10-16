@@ -32,6 +32,9 @@ namespace FRED.UI.Content {
                 break;
             }
 
+            // @ToDo Generate Properties Editor
+            System.Diagnostics.Debug.Print(file.GetGroups()?.ToString());
+
             this.Source.SetContent(file.GetSource());
         }
     }
